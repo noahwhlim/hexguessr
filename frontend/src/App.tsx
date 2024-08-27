@@ -9,7 +9,7 @@ function App() {
     let hex: string =
       "#" + ((Math.random() * 0xffffff) << 0).toString(16).padStart(6, "0");
     setColor(hex);
-    console.log("generated hex: ", hex);
+    // console.log("generated hex: ", hex);
   };
 
   const onFormSubmit = (e: any) => {
@@ -44,23 +44,13 @@ function App() {
         </div>
         <form onSubmit={onFormSubmit} className="">
           <div className="flex flex-row relative mt-2 rounded-md shadow-sm">
-            {/* <div className="bg-gray-400 px-1 align-center rounded-l-md">#</div> */}
-            {/* <div className="">
-              <span className="bg-blue-200 rounded-l-md px-2 py-2 text-md">#</span>
-              <input
-                value={answer}
-                onChange={(e) => setAnswer(e.target.value)}
-                className="p-2 rounded-r-md focus:outline-none text-md bg-blue-200"
-              />
-            </div> */}
-
             <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-              <span className="text-gray-500 text-md">#</span>
+              <span className="text-gray-500 text-md lg:text-xl">#</span>
             </div>
             <input
               value={answer}
               onChange={(e) => setAnswer(e.target.value)}
-              className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-indigo-500 text-md lg:text-xl sm:leading-6"
             />
           </div>
 
